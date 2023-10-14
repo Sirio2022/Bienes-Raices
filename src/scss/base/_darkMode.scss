@@ -1,0 +1,52 @@
+.dark-mode {
+  background-color: darken($grisOscuro, 10%);
+
+  p,
+  a,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span,
+  li,
+  button,
+  input,
+  textarea,
+  select,
+  option,
+  label,
+  .dark-mode-boton {
+    color: $gris;
+  }
+  .anuncio,
+  .resumen-propiedad {
+    background-color: $grisOscuro;
+    color: $grisOscuro;
+    border: 1px solid $grisOscuro;
+    .precio {
+      color: $verde;
+    }
+    .icono {
+      filter: invert(1);
+    }
+  }
+  .texto-nosotros blockquote {
+    color: $gris;
+  }
+
+  .formulario {
+    label,
+    legend,
+    p {
+      color: $gris;
+    }
+    input:not([type='submit']),
+    textarea,
+    select {
+      background-color: $grisOscuro;
+      border: 1px solid $grisOscuro;
+    }
+  }
+}
