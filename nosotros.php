@@ -82,5 +82,5 @@
     </section>
 
     <?php
-      include 'includes/template/footer.php';
+      incluirTemplate('footer');
     ?>
