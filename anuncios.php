@@ -53,7 +53,7 @@
                 </li>
               </ul>
 
-              <a href="anuncio.html" class="boton-amarillo-block">
+              <a href="anuncio.php" class="boton-amarillo-block">
                 Ver Propiedad
               </a>
             </div>
@@ -106,7 +106,7 @@
                 </li>
               </ul>
 
-              <a href="anuncio.html" class="boton-amarillo-block">
+              <a href="anuncio.php" class="boton-amarillo-block">
                 Ver Propiedad
               </a>
             </div>
@@ -159,7 +159,7 @@
                 </li>
               </ul>
 
-              <a href="anuncio.html" class="boton-amarillo-block">
+              <a href="anuncio.php" class="boton-amarillo-block">
                 Ver Propiedad
               </a>
             </div>
@@ -212,7 +212,7 @@
                 </li>
               </ul>
 
-              <a href="anuncio.html" class="boton-amarillo-block">
+              <a href="anuncio.php" class="boton-amarillo-block">
                 Ver Propiedad
               </a>
             </div>
@@ -265,7 +265,7 @@
                 </li>
               </ul>
 
-              <a href="anuncio.html" class="boton-amarillo-block">
+              <a href="anuncio.php" class="boton-amarillo-block">
                 Ver Propiedad
               </a>
             </div>
@@ -318,7 +318,7 @@
                 </li>
               </ul>
 
-              <a href="anuncio.html" class="boton-amarillo-block">
+              <a href="anuncio.php" class="boton-amarillo-block">
                 Ver Propiedad
               </a>
             </div>
@@ -333,10 +333,10 @@
     <footer class="footer seccion">
       <div class="contenedor contenedor-footer">
         <nav class="navegacion">
-          <a href="nosotros.html">Nosotros</a>
-          <a href="anuncios.html">Anuncios</a>
-          <a href="blog.html">Blog</a>
-          <a href="contacto.html">Contacto</a>
+          <a href="nosotros.php">Nosotros</a>
+          <a href="anuncios.php">Anuncios</a>
+          <a href="blog.php">Blog</a>
+          <a href="contacto.php">Contacto</a>
         </nav>
       </div>
 

@@ -1,4 +1,5 @@
 <?php
+  $inicio = true;
   include 'includes/template/header.php';
 ?>
 
@@ -96,7 +97,7 @@
               </li>
             </ul>
 
-            <a href="anuncio.html" class="boton-amarillo-block">
+            <a href="anuncio.php" class="boton-amarillo-block">
               Ver Propiedad
             </a>
           </div>
@@ -149,7 +150,7 @@
               </li>
             </ul>
 
-            <a href="anuncio.html" class="boton-amarillo-block">
+            <a href="anuncio.php" class="boton-amarillo-block">
               Ver Propiedad
             </a>
           </div>
@@ -202,7 +203,7 @@
               </li>
             </ul>
 
-            <a href="anuncio.html" class="boton-amarillo-block">
+            <a href="anuncio.php" class="boton-amarillo-block">
               Ver Propiedad
             </a>
           </div>
@@ -213,7 +214,7 @@
       <!--.contenedor de anuncios-->
 
       <div class="alinear-derecha">
-        <a href="anuncios.html" class="boton-verde">Ver todas</a>
+        <a href="anuncios.php" class="boton-verde">Ver todas</a>
       </div>
     </section>
 
@@ -223,7 +224,7 @@
         Llena el formulario de contacto y un asesor se pondrá en contacto
         contigo a la brevedad
       </p>
-      <a href="contacto.html" class="boton-amarillo">Contactános</a>
+      <a href="contacto.php" class="boton-amarillo">Contactános</a>
     </section>
 
     <div class="contenedor seccion seccion-inferior">
@@ -243,7 +244,7 @@
           </div>
 
           <div class="texto-entrada">
-            <a href="entrada.html">
+            <a href="entrada.php">
               <h4>Terraza en el techo de tu casa: guía para construir</h4>
               <p class="informacion-meta">
                 Escrito el: <span>20/10/2023</span> por: <span>Admin</span>
@@ -269,7 +270,7 @@
           </div>
 
           <div class="texto-entrada">
-            <a href="entrada.html">
+            <a href="entrada.php">
               <h4>Guía para la decoración de tu hogar</h4>
               <p class="informacion-meta">
                 Escrito el: <span>20/10/2023</span> por: <span>Admin</span>
@@ -298,10 +299,10 @@
     <footer class="footer seccion">
       <div class="contenedor contenedor-footer">
         <nav class="navegacion">
-          <a href="nosotros.html">Nosotros</a>
-          <a href="anuncios.html">Anuncios</a>
-          <a href="blog.html">Blog</a>
-          <a href="contacto.html">Contacto</a>
+          <a href="nosotros.php">Nosotros</a>
+          <a href="anuncios.php">Anuncios</a>
+          <a href="blog.php">Blog</a>
+          <a href="contacto.php">Contacto</a>
         </nav>
       </div>
 

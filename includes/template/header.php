@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="build/css/app.css" />
   </head>
   <body>
-    <header class="header inicio">
+    <header class="header <?php echo $inicio ? 'inicio' : ''; ?>">
       <div class="contenedor contenido-header">
         <div class="barra">
           <a href="/">
@@ -33,6 +33,7 @@
         </div>
 
         <!--cierre barra-->
-        <h1>Venta de Casas y Apartamentos Exclusivos de Lujo</h1>
+        <?php echo $inicio ? '<h1>Venta de Casas y Apartamentos Exclusivos de Lujo</h1>' : ''; ?>
+      
       </div>
     </header>
