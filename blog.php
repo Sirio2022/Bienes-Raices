@@ -1,7 +1,9 @@
 <?php
-  include 'includes/template/header.php';
-?>
 
+  require 'includes/funciones.php';
+  
+  incluirTemplate('header');
+?>
     <main class="contenedor seccion contenido-centrado">
       <h1>Nuestro Blog</h1>
 
