@@ -1,0 +1,16 @@
+.alerta {
+  padding: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  text-align: center;
+  background-color: #f2f2f2;
+  color: $blanco;
+  font-family: $fuente_principal;
+  font-weight: $bold;
+  text-transform: uppercase;
+  &.error {
+    background-color: $rojo;
+  }
+}
