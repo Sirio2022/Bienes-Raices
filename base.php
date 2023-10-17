@@ -5,12 +5,10 @@
   incluirTemplate('header');
 ?>
 
-    <main class="contenedor seccion">
-      <h1>Base</h1>
-    </main>
+<main class="contenedor seccion">
+    <h1>Base</h1>
+</main>
 
-    <?php
+<?php
       incluirTemplate('footer');
     ?>
-
- 
