@@ -32,6 +32,10 @@ incluirTemplate('header');
 
     <p class="alerta exito">Anuncio Creado Correctamente</p>
 
+  <?php elseif (intval($resultado) === 2) : ?>
+
+    <p class="alerta exito">Anuncio Actualizado Correctamente</p>
+
   <?php endif; ?>
 
   <a href="/admin/propiedades/crear.php" class="boton boton-verde">Nueva Propiedad</a>
@@ -71,7 +75,7 @@ incluirTemplate('header');
           </td>
           <td>
             <a href="#" class="boton-rojo-inline">Eliminar</a>
-            <a href="#" class="boton-acua-inline">Actualizar</a>
+            <a href="admin/propiedades/actualizar.php?id=<?php echo $resultado['id']; ?>" class="boton-acua-inline">Actualizar</a>
 
           </td>
         </tr>

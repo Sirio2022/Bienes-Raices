@@ -10,9 +10,9 @@
 }
 
 .boton-rojo-inline {
-  @include boton($rojo, inline);
+  @include boton($rojo, block);
 }
 
 .boton-acua-inline {
-  @include boton($acua, inline);
+  @include boton($acua, block);
 }
