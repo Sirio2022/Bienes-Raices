@@ -18,6 +18,33 @@ $resultadoConsulta = mysqli_query($db, $query);
 // Resultado de la creacion de la propiedad
 $resultado = $_GET['resultado'] ?? null;
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $id = $_POST['id'];
+  $id = filter_var($id, FILTER_VALIDATE_INT);
+
+  if ($id) {
+
+    // Eliminar el archivo
+    $query = "SELECT imagen FROM propiedades WHERE id = $id";
+
+    $resultado = mysqli_query($db, $query);
+
+    $propiedad = mysqli_fetch_assoc($resultado);
+
+    unlink('../imagenes/' . $propiedad['imagen']);
+
+
+
+    // Eliminar propiedad
+    $query = "DELETE FROM propiedades WHERE id= $id";
+
+    $resultado = mysqli_query($db, $query);
+
+    if ($resultado) {
+      header('Location: /admin?resultado=3');
+    }
+  }
+}
 
 
 // Include the header template
@@ -35,6 +62,10 @@ incluirTemplate('header');
   <?php elseif (intval($resultado) === 2) : ?>
 
     <p class="alerta exito">Anuncio Actualizado Correctamente</p>
+
+  <?php elseif (intval($resultado) === 3) : ?>
+
+    <p class="alerta exito">Anuncio Eliminado Correctamente</p>
 
   <?php endif; ?>
 
@@ -74,8 +105,12 @@ incluirTemplate('header');
             $ <?php echo $resultado['precio']; ?>
           </td>
           <td>
-            <a href="#" class="boton-rojo-inline">Eliminar</a>
-            <a href="admin/propiedades/actualizar.php?id=<?php echo $resultado['id']; ?>" class="boton-acua-inline">Actualizar</a>
+            <form method="POST" class="w-100">
+              <input type="hidden" name="id" value="<?php echo $resultado['id']; ?>" />
+              <input type="submit" class="boton-rojo-block" value="Eliminar" />
+
+            </form>
+            <a href="admin/propiedades/actualizar.php?id=<?php echo $resultado['id']; ?>" class="boton-acua-block">Actualizar</a>
 
           </td>
         </tr>

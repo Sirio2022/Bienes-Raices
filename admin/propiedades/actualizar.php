@@ -115,7 +115,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
   $medida = 1000 * 1000;
 
   if ($imagen['size'] > $medida) {
-    $errores[] = "La imagen es muy pesada";
+    $errores[] = "La imagen es muy pesada, selecciona una imagen menor a 1mb";
   }
 
   // echo "<pre>";
@@ -124,31 +124,37 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
   // Revisar que el arreglo de errores este vacio
   if (empty($errores)) {
-
     // /** SUBIDA DE ARCHIVOS **/
 
-    // //  Crear carpeta
-    // $carpetaImagenes = '../../imagenes/';
+    //  Crear carpeta
+    $carpetaImagenes = '../../imagenes/';
 
-    // if (!is_dir($carpetaImagenes)) {
-    //   mkdir($carpetaImagenes);
-    // }
+    if (!is_dir($carpetaImagenes)) {
+      mkdir($carpetaImagenes);
+    }
 
-    // // Generar nombres unicos.
-    // $nombreImagen = md5(uniqid(rand(), true)) . ".jpg";
-
-    // // Subir imagen
-    // move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImagen);
+    $nombreImagen = '';
 
 
+    if ($imagen['name']) {
+      // Eliminar la imagen previa
+      unlink($carpetaImagenes . $propiedad['imagen']);
 
+      // Generar nombres unicos.
+      $nombreImagen = md5(uniqid(rand(), true)) . ".jpg";
+
+      // Subir imagen
+      move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImagen);
+    } else {
+      $nombreImagen = $propiedad['imagen'];
+    }
 
     // Escribir el Query
-    $query = "UPDATE propiedades SET titulo = '$titulo', precio = '$precio', descripcion = '$descripcion', habitaciones = '$habitaciones', wc = '$wc', estacionamiento = '$estacionamiento', vendedores_id = '$vendedorId' WHERE id = '$id'";
+    $query = "UPDATE propiedades SET titulo = '$titulo', precio = '$precio', imagen='$nombreImagen', descripcion = '$descripcion', habitaciones = '$habitaciones', wc = '$wc', estacionamiento = '$estacionamiento', vendedores_id = '$vendedorId' WHERE id = '$id'";
 
     //echo ($query);
 
- 
+
     // Insertar en la base de datos
     $resultado = mysqli_query($db, $query);
 
