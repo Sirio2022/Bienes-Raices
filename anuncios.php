@@ -5,7 +5,7 @@ require 'includes/funciones.php';
 incluirTemplate('header');
 ?>
 
-<main class="contendedor seccion">
+<main class="contenedor seccion">
 
     <h2>Casas y Aptos en Venta</h2>
 
