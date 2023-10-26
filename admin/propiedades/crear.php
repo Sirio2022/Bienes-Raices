@@ -5,6 +5,13 @@ require '../../includes/config/database.php';
 
 require '../../includes/funciones.php';
 
+// Autenticar el usuario
+$auth = estaAutenticado();
+
+if (!$auth) {
+  header('Location: /');
+}
+
 // Conectar a la base de datos
 
 $db = conectarDB();

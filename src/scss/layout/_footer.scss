@@ -8,6 +8,11 @@
       visibility: visible;
       opacity: 1;
       height: auto;
+
+      a:hover {
+        transition: color 0.3s ease-in-out;
+        color: $amarillo;
+      }
     }
   }
 

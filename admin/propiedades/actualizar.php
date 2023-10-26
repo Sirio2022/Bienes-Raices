@@ -4,6 +4,11 @@
 require '../../includes/config/database.php';
 
 require '../../includes/funciones.php';
+$auth = estaAutenticado();
+
+if (!$auth) {
+  header('Location: /');
+}
 
 // Validar la URL por ID valido
 $id = $_GET['id'];
